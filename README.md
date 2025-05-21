@@ -7,6 +7,8 @@
 <h3> Qompass AI on Vulkan </h3>
 
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Vulkan)
+![GitHub all releases](https://img.shields.io/github/downloads/qompassai/Vulkan/total?style=flat-square)
+
   <a href="https://www.vulkan.org/">
   <img src="https://img.shields.io/badge/Vulkan-AC162C?style=for-the-badge&logo=vulkan&logoColor=white" alt="Vulkan">
 </a>
