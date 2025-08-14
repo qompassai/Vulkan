@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 mkdir -p ~/.local/share/pocl/cuda
 mkdir -p ~/.local/share/vulkan/explicit_layer.d
 mkdir -p ~/.local/share/vulkan/icd.d
