@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
 # quickstart.sh
-# Qompass AI Vulkan Quickstart + parallel-hashmap + config.json automation
-
+# Qompass AI Vulkan Quickstart
 set -euo pipefail
-
 TARGET="${1:-}"
-
-# XDG variables - use only underscores
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 XDG_BIN_HOME="${XDG_BIN_HOME:-$HOME/.local/bin}"
 XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
-
 detect_shell() {
 	shell_name=$(basename "$SHELL")
 	case "$shell_name" in
@@ -20,7 +15,6 @@ detect_shell() {
 	*) echo "unknown" ;;
 	esac
 }
-
 add_path_hint() {
 	shell_type="$1"
 	case "$shell_type" in
@@ -41,7 +35,6 @@ add_path_hint() {
 		;;
 	esac
 }
-
 install_vulkan_sdk() {
 	OS="$(uname -s)"
 	ARCH="$(uname -m)"
@@ -73,7 +66,6 @@ install_vulkan_sdk() {
 		echo "Could not retrieve latest Vulkan SDK version."
 		exit 1
 	fi
-
 	DOWNLOAD_URL="https://sdk.lunarg.com/sdk/download/$LATEST_VERSION/$PLATFORM/vulkansdk-$SDK_SUFFIX-$LATEST_VERSION.$EXT"
 	echo "Latest Vulkan SDK: version $LATEST_VERSION"
 	echo "Download URL: $DOWNLOAD_URL"
@@ -92,7 +84,6 @@ install_vulkan_sdk() {
 		tar -xf vulkansdk.tar.xz --strip-components=1
 		rm vulkansdk.tar.xz
 	fi
-
 	PHMAP_REPO="$HOME/parallel-hashmap"
 	PHMAP_SRC="$PHMAP_REPO/parallel_hashmap"
 	SDK_INCLUDE="$INSTALL_DIR/include"
@@ -146,7 +137,6 @@ install_vulkan_sdk() {
 	echo "Vulkan SDK downloaded to $INSTALL_DIR."
 	cd "$OLD_DIR"
 }
-
 install_android_ndk() {
 	NDK_PAGE=$(curl -s "https://developer.android.com/ndk/downloads")
 	LATEST_NDK_ZIP=$(echo "$NDK_PAGE" | grep -oE "android-ndk-r[0-9]+[a-z]?(-linux\.zip)?" | head -1)
