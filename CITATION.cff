@@ -6,8 +6,8 @@ authors:
     given-names: "Matthew A."
     orcid: "https://orcid.org/0000-0002-0302-4812"
     affiliation: "Qompass AI"
-version: "v2026-01-04"
-date-released: "2026-01-04"
+version: "v2026-01-18"
+date-released: "2026-01-18"
 repository-code: "https://github.com/qompassai/vulkan"
 license: "Q-CDA-1.0"
 keywords:
@@ -16,6 +16,7 @@ keywords:
   - Healthcare
   - Post-Quantum Cryptography
   - Quantum
-  - opensource
-  - software
+  - data science
+  - machine learning
+  - python
 abstract: "Qompass AI Vulkan setup"
